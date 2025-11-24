@@ -1,0 +1,132 @@
+
+        /* Variables de color y estilos generales */
+        :root {
+            --color-fondo: #000000; 
+            --color-acento: #B8860B; 
+            --color-texto-principal: #FFFFFF;
+            --color-texto-suave: #AAAAAA;
+            --color-separador: #333333;
+            --font-serif: 'Garamond', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Arial, sans-serif;
+     }
+
+        body { font-family: var(--font-sans); margin: 0; padding: 0; background-color: var(--color-fondo); color: var(--color-texto-principal); line-height: 1.8; letter-spacing: 0.5px; }
+        h1, h2, h3 { font-family: var(--font-serif); color: var(--color-acento); text-transform: uppercase; letter-spacing: 3px; font-weight: 400; }
+        h2 { font-size: 2.8em; margin-bottom: 50px; position: relative; }
+        h2::after { content: ''; display: block; width: 80px; height: 1px; background: var(--color-acento); margin: 15px auto 0; }
+        .section { padding: 120px 8%; text-align: center; border-bottom: 1px solid var(--color-separador); }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* 1. Cabecera y Navegación */
+        header { background-color: var(--color-fondo); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); position: sticky; top: 0; z-index: 1000; }
+        nav { padding: 0 5%; display: flex; align-items: center; justify-content: space-between; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: flex-end; align-items: center; }
+        .logo-container { margin-right: auto; padding: 15px 0; }
+        .logo-img { height: 70px; width: 70px; }
+        nav ul li a { display: block; color: var(--color-texto-suave); text-decoration: none; padding: 30px 25px; font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--color-acento); text-shadow: 0 0 10px rgba(184, 134, 11, 0.5); }
+
+        /* 2. Hero Section */
+        .hero { padding: 180px 8% 120px; text-align: center; }
+        .hero h1 { font-size: 4.5em; margin-top: 0; line-height: 1.1; color: var(--color-texto-principal); text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }
+        .hero h1 span { color: var(--color-acento); }
+        .hero p { font-size: 1.6em; color: var(--color-texto-suave); margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .cta-button { background-color: var(--color-acento); color: var(--color-fondo); padding: 15px 45px; text-decoration: none; border-radius: 2px; font-weight: 700; display: inline-block; font-size: 1.1em; transition: opacity 0.3s; border: 2px solid var(--color-acento); }
+        .cta-button:hover { opacity: 0.8; background-color: transparent; color: var(--color-acento); }
+
+        /* 3. Sección del Entrenador */
+        #entrenador { 
+            display: block; 
+            text-align: left; 
+            background-color: #0a0a0a; 
+        }
+        #entrenador .container {
+            max-width: 900px;
+            text-align: left;
+        }
+        #entrenador h2::after { margin-left: 0; }
+        #entrenador-foto { display: none; }
+        
+        .name-tag { color: var(--color-texto-principal); font-size: 2em; letter-spacing: 2px; margin: 0 0 10px 0; font-family: var(--font-serif); }
+        
+        .credenciales-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            align-items: start;
+        }
+        .certificado-box {
+            padding: 24px;
+            text-align: center;
+            background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+            border: 1px solid rgba(184,134,11,0.12);
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            min-width: 0;
+            margin-bottom: 0;
+        }
+        .certificado-box:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(184,134,11,0.12); border-color: var(--color-acento); }
+        .certificado-box h3 {
+            color: var(--color-texto-principal);
+            font-size: 1.25em;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+        .certificado-box p {
+            color: var(--color-acento);
+            font-weight: 700;
+            font-size: 0.85em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Ajustes responsivos menores */
+        @media (max-width: 600px) {
+            .section { padding: 60px 6%; }
+            .hero h1 { font-size: 2.2em; }
+        }
+
+        /* 4. Servicios */
+        #especializacion { background-color: var(--color-fondo); }
+        .grid-3 { display: flex; justify-content: space-between; gap: 40px; margin-top: 50px; }
+        .service-box { flex: 1; padding: 30px; text-align: center; background: #0a0a0a; border: 1px solid var(--color-separador); border-radius: 4px; }
+        .service-box h3 { color: var(--color-texto-principal); font-size: 1.5em; margin-top: 0; margin-bottom: 15px; }
+        .service-box h3 span { color: var(--color-acento); font-size: 1.2em; }
+        .service-box p { color: var(--color-texto-suave); }
+
+        /* 5. Precios */
+        #planes { background-color: #050505; padding-bottom: 150px; }
+        .grid-precios { display: flex; justify-content: center; gap: 30px; margin-top: 50px; }
+        .plan-card {
+            background-color: #1a1a1a;
+            padding: 40px 30px;
+            width: 300px;
+            border-radius: 4px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            border: 1px solid var(--color-separador);
+        }
+        .plan-card:hover { box-shadow: 0 15px 30px rgba(184, 134, 11, 0.2); border-color: var(--color-acento); }
+        
+        .precio { font-size: 3.5em; font-family: var(--font-serif); color: var(--color-texto-principal); margin: 10px 0; line-height: 1; }
+        .precio span { font-size: 0.4em; color: var(--color-texto-suave); vertical-align: top; margin-right: 5px; }
+        .precio-mes { color: var(--color-acento); text-transform: uppercase; font-size: 0.9em; margin-bottom: 30px; letter-spacing: 2px; }
+
+        /* 6. Contacto */
+        #contacto { background-color: #000; border-top: 1px solid var(--color-separador); }
+        .calendly-container {
+            margin: 40px auto 0;
+            border: 1px solid var(--color-separador);
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #151515;
+            padding: 20px;
+        }
+
+        /* 7. Pie */
+        footer { background-color: #000; color: var(--color-texto-suave); text-align: center; padding: 40px 0; font-size: 0.9em; border-top: 3px solid var(--color-acento); }
+        footer a { color: var(--color-acento); text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: var(--color-texto-principal); }
