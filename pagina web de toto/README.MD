@@ -6,7 +6,7 @@ Sitio web estático para Tomás Agustín Miguel – Asesoría Élite.
 
 - `index.html` – Web principal.
 - `style.css` – Estilos.
-- `Assets/LogoToto-.png` – Subí tu logo en esta carpeta tras subir el repo.
+- `assets/logototo-.png` – Subí tu logo en esta carpeta tras subir el repo.
 
 ## Publicación en Vercel
 
